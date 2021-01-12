@@ -16,5 +16,15 @@ namespace SimpleCalc
         {
             InitializeComponent();
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            int LeftBox;
+            int RightBox;
+            int answer;
+
+            LeftBox = int.Parse(input1_textbox);
+            RightBox = int.Parse(input2_textbox);
+        }
     }
 }
