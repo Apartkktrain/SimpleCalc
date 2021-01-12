@@ -23,8 +23,21 @@ namespace SimpleCalc
             int RightBox;
             int answer;
 
-            LeftBox = int.Parse(input1_textbox);
-            RightBox = int.Parse(input2_textbox);
+            /*LeftBox = int.Parse(input1_textbox.Text);
+            RightBox = int.Parse(input2_textbox.Text);
+            answer = LeftBox + RightBox;
+            answer_textbox.Text = answer.ToString();*/
+            if (int.TryParse(input1_textbox.Text,out LeftBox) || int.TryParse(input2_textbox.Text, out RightBox))
+            {
+                LeftBox = int.Parse(input1_textbox.Text);
+                RightBox = int.Parse(input2_textbox.Text);
+                answer = LeftBox + RightBox;
+                answer_textbox.Text = answer.ToString();
+            }
+            else
+            {
+                MessageBox.Show("値はINTのみ入力できます。","エラー",MessageBoxButtons.OK,MessageBoxIcon.Error);
+            }
         }
     }
 }
