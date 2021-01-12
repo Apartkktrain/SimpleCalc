@@ -36,7 +36,7 @@ namespace SimpleCalc
             }
             else
             {
-                MessageBox.Show("値はINTのみ入力できます。","エラー",MessageBoxButtons.OK,MessageBoxIcon.Error);
+                MessageBox.Show("値はINTのみ入力できます。","info",MessageBoxButtons.OK,MessageBoxIcon.Error);
             }
         }
     }
